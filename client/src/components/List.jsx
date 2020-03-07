@@ -3,28 +3,9 @@ import ListElement from './ListElement.jsx';
 
 const List = (props) =>
   <div>
-    <ListElement />
-    <ListElement />
-    <ListElement />
-    <ListElement />
-    <ListElement />
-    <ListElement />
-    <ListElement />
-    <ListElement />
-    <ListElement />
-    <ListElement />
-    <ListElement />
-    <ListElement />
-    <ListElement />
-    <ListElement />
-    <ListElement />
-    <ListElement />
-    <ListElement />
-    <ListElement />
-    <ListElement />
-    <ListElement />
-    <ListElement />
-    <ListElement />
+    {props.students.map((student, index) => (
+    <ListElement key={index} student={student} getStudents={props.getStudents}/>
+    ))}
   </div>
 
 
